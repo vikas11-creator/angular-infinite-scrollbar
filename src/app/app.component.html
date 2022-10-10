@@ -1,0 +1,15 @@
+<div 
+  class="search-results ps"
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollDown()"
+  (scrolledUp)="onUp()"
+  [scrollWindow]="false"
+  [perfectScrollbar]="config"
+>
+  <p *ngFor="let i of array">
+    {{ i }}
+  </p>
+</div>
