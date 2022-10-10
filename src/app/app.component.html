@@ -1,15 +1,38 @@
-<div 
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Month</th>
+    </tr>
+  </thead>
+  <tbody
+    class="search-results ps"
+    infinite-scroll
+    [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollUpDistance]="scrollUpDistance"
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown()"
+    (scrolledUp)="onUp()"
+    [scrollWindow]="false"
+    [perfectScrollbar]="config"
+  >
+    <tr *ngFor="let i of array">
+      <td>{{ i }}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div
   class="search-results ps"
   infinite-scroll
   [infiniteScrollDistance]="scrollDistance"
   [infiniteScrollUpDistance]="scrollUpDistance"
   [infiniteScrollThrottle]="throttle"
-  (scrolled)="onScrollDown()"
+  (scrolled)="onScrollDown(ev)"
   (scrolledUp)="onUp()"
   [scrollWindow]="false"
   [perfectScrollbar]="config"
 >
-  <p *ngFor="let i of array">
-    {{ i }}
-  </p>
+  <div *ngFor="let i of array">
+    <div>{{ i }}</div>
+  </div>
 </div>

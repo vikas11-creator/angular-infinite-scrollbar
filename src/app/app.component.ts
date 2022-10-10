@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   array = [];
-  sum = 20;
+  sum = 30;
   throttle = 100;
   scrollDistance = 1;
   scrollUpDistance = 2;
